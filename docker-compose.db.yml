@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: db
+    image: postgres:alpine3.18
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-strapi}
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - sweet_app_network
+    restart: unless-stopped
+
+volumes:
+  postgres:
+
+networks:
+  sweet_app_network:
+    driver: bridge

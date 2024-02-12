@@ -1,0 +1,30 @@
+{
+	"name": "view",
+	"version": "1.0.0",
+	"repository": "git@github.com:snilli/sport-view.git",
+	"author": "snilli <mklx1319@gmail.com>",
+	"license": "MIT",
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"build:lib": "turbo run build:lib",
+		"test": "turbo run test",
+		"lint": "turbo run lint",
+		"dev": "turbo run dev",
+		"start": "turbo run start",
+		"db": "docker-compose -f docker-compose.db.yml up -d",
+		"up": "docker-compose up -d"
+	},
+	"private": true,
+	"devDependencies": {
+		"prettier": "^3.2.5",
+		"turbo": "^1.12.3"
+	},
+	"volta": {
+		"node": "20.10.0"
+	},
+	"packageManager": "pnpm@8.15.1"
+}

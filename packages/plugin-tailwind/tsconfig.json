@@ -1,0 +1,21 @@
+{
+  "extends": "tsconfig/base.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "outDir": "dist",
+    "baseUrl": "./",
+    "lib": [
+      "es2017"
+    ],
+    "target": "ES2021",
+    "noUncheckedIndexedAccess": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.ts",
+    "dist"
+  ]
+}
