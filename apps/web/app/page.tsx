@@ -10,14 +10,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { tv } from 'tailwind-variants'
 import ContentCard from './components/ContentCard'
-
-const a = tv({
-	slots: {
-		card: '',
-	},
-})
 
 export default function Example() {
 	const screen = useScreen()
